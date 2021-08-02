@@ -804,7 +804,7 @@ module.exports = handle = (client, Client) => {
           case 'attp':  
                      try {
                         if(isLimit(data.sender)) return data.reply(mess.limit)
-                        if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}${data.command} [ emoji ]*\nContoh : ${data.prefix}${data.command} 😃`)
+                        if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}${data.command} [ teks ]*\nContoh : ${data.prefix}${data.command} shiro`)
                         Client.sendStickerFromUrl(from, `https://api.xteam.xyz/attp?file&text=${encodeURIComponent(data.body)}`, message, { pack: `${configs.pack}`, author: `${configs.author}` })
                     } catch {
                         data.reply('error')
